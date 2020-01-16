@@ -13,7 +13,7 @@ class Slicer {
 
   List<int> slice(List<int> indices) {
     var results = <List<int>>[];
-    for(var i = 0; i < indices.length; i++) {
+    for (var i = 0; i < indices.length; i++) {
       print('${(i * 100) / indices.length}%');
       var order = _sliceStageTwo(indices.sublist(0, indices.length - i));
       if (order != null) {
@@ -29,7 +29,7 @@ class Slicer {
       } else if (valA == valB) {
         return 0;
       }
-        return -1;
+      return -1;
     });
 
     return results.last;
@@ -65,5 +65,4 @@ class Slicer {
     }
     return null;
   }
-
 }

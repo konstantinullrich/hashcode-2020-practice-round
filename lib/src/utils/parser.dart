@@ -8,11 +8,12 @@ SliceDataset getInputParser(File inputFile) {
   var pizzaRaw = input[1].split(' ');
 
   var pizzas = <int>[];
-  for(var pizza in pizzaRaw) {
+  for (var pizza in pizzaRaw) {
     pizzas.add(int.parse(pizza));
   }
 
-  var sliceDataset = SliceDataset(int.parse(party[0]), int.parse(party[1]), pizzas);
+  var sliceDataset =
+      SliceDataset(int.parse(party[0]), int.parse(party[1]), pizzas);
 
   return sliceDataset;
 }
