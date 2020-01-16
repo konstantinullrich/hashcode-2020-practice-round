@@ -18,7 +18,7 @@ $ dart bin/main.dart
 
 ### Build
 ```
-$ dart2native bin/main.dart -o hashcode
+$ dart2native bin/main.dart -o build/hashcode
 ```
 
 ### Help
