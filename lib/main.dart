@@ -26,7 +26,7 @@ void main(List<String> args) {
   }
 
   var sliceDataset = getInputParser(inputFile);
-  var slicer = Slicer(sliceDataset);
+  var slicer = Slicer(sliceDataset, progress: arguments['progress']);
 
   var result = slicer.slice(sliceDataset.indexRange);
   print('Max Score: ${sliceDataset.slicesMax}');
