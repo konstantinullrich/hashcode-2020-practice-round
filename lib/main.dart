@@ -6,7 +6,7 @@ void main(List<String> args) {
   var arguments = getArgParser().parse(args);
 
   if (arguments['help']) {
-    print('HashCode Slicer Help\n\$ hashcode <inputfile-path>\nOptions:');
+    print('HashCode Slicer Help\n\$ hashcode <inputfile-path>\n\nOptions:');
     print(getArgParser().usage);
     exit(1);
   }

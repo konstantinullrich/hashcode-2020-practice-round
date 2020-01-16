@@ -1,22 +1,35 @@
-A library for Dart developers.
+# Google Hashcode
+## Practice Round
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+Here is our solution algorithm for the Google hash code competition. The result sets are in `solution/` and the input
+data in `data/`
 
-## Usage
+## Installation
 
-A simple usage example:
-
-```dart
-import 'package:hashcode_slice/main.dart';
-
-main() {
-  var awesome = new Awesome();
-}
+You need Dart to execute this
+```
+$ pub get
 ```
 
-## Features and bugs
+### Run
+```
+$ dart lib/main.dart
+```
 
-Please file feature requests and bugs at the [issue tracker][tracker].
+### Build
+```
+$ dart2native lib/main.dart -o hashcode
+```
 
-[tracker]: http://example.com/issues/replaceme
+### Help
+```
+HashCode Slicer Help
+$ hashcode <inputfile-path>
+
+Options:
+-o, --output-file=<path>    Specify a output File
+-p, --[no-]progress         Show the progress of the action
+-h, --[no-]help   
+```
+Licensed under MIT license
+(c) 2020 - Konstantin Ullrich
