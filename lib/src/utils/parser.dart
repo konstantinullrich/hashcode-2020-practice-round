@@ -1,9 +1,7 @@
-import 'dart:io';
+import 'package:hashcode_slice/hashcode_slice.dart';
 
-import 'package:hashcode_slice/src/slice_dataset.dart';
-
-SliceDataset getInputParser(File inputFile) {
-  var input = inputFile.readAsStringSync().split('\n');
+SliceDataset getInputParser(String inputString) {
+  var input = inputString.split('\n');
   var party = input[0].split(' ');
   var pizzaRaw = input[1].split(' ');
 

@@ -1,13 +1,11 @@
 import 'dart:io';
 
-import 'package:hashcode_slice/src/slicer.dart';
-import 'package:hashcode_slice/src/utils/argparser.dart';
-import 'package:hashcode_slice/src/utils/parser.dart';
+import 'package:hashcode_slice/hashcode_slice.dart';
 
 void main(List<String> args) {
   var arguments = getArgParser().parse(args);
 
-  if(arguments['help']) {
+  if (arguments['help']) {
     print('HashCode Slicer Help\n\$ hashcode <inputfile-path>\nOptions:');
     print(getArgParser().usage);
     exit(1);
@@ -25,7 +23,7 @@ void main(List<String> args) {
     outputFile = File(arguments['output-file']);
   }
 
-  var sliceDataset = getInputParser(inputFile);
+  var sliceDataset = getInputParser(inputFile.readAsStringSync());
   var slicer = Slicer(sliceDataset, progress: arguments['progress']);
 
   var result = slicer.slice(sliceDataset.indexRange);

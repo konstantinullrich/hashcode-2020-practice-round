@@ -1,4 +1,4 @@
-import 'package:hashcode_slice/src/slice_dataset.dart';
+import 'package:hashcode_slice/hashcode_slice.dart';
 
 class Slicer {
   final SliceDataset sliceDataset;

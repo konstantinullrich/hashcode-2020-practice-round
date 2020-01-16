@@ -10,4 +10,10 @@ class SliceDataset {
     List.generate(pizzas.length, (index) => range.add(index));
     return range;
   }
+
+  Map<String, dynamic> toMap() => {
+        'slicesMax': slicesMax,
+        'differentTypes': differentTypes,
+        'pizzas': pizzas
+      };
 }
