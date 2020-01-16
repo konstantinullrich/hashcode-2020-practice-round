@@ -1,9 +1,10 @@
-import 'package:hashcode_slice/src/slice_dataset.dart';
+import 'package:hashcode_slice/hashcode_slice.dart';
 
 class Slicer {
   final SliceDataset sliceDataset;
+  final bool progress;
 
-  Slicer(this.sliceDataset);
+  Slicer(this.sliceDataset, {this.progress = false});
 
   int sliceCalc(List<int> indices) {
     var result = 0;
@@ -14,7 +15,9 @@ class Slicer {
   List<int> slice(List<int> indices) {
     var results = <List<int>>[];
     for (var i = 0; i < indices.length; i++) {
-      print('${(i * 100) / indices.length}%');
+      if (progress) {
+        print('${(i * 100) / indices.length}%');
+      }
       var order = _sliceStageTwo(indices.sublist(0, indices.length - i));
       if (order != null) {
         results.add(order);

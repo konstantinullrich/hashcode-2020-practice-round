@@ -8,7 +8,7 @@ Created from templates made available by Stagehand under a BSD-style
 A simple usage example:
 
 ```dart
-import 'package:hashcode_slice/hashcode_slice.dart';
+import 'package:hashcode_slice/main.dart';
 
 main() {
   var awesome = new Awesome();
