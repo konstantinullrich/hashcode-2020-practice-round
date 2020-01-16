@@ -13,12 +13,12 @@ $ pub get
 
 ### Run
 ```
-$ dart lib/main.dart
+$ dart bin/main.dart
 ```
 
 ### Build
 ```
-$ dart2native lib/main.dart -o hashcode
+$ dart2native bin/main.dart -o hashcode
 ```
 
 ### Help
