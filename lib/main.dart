@@ -7,12 +7,18 @@ import 'package:hashcode_slice/src/utils/parser.dart';
 void main(List<String> args) {
   var arguments = getArgParser().parse(args);
 
-  if (arguments['input-file'] == null) {
-    print('You need to specify a input file using -i or --input-file');
+  if(arguments['help']) {
+    print('HashCode Slicer Help\n\$ hashcode <inputfile-path>\nOptions:');
+    print(getArgParser().usage);
     exit(1);
   }
 
-  var inputFile = File(arguments['input-file']);
+  if (arguments.rest.isEmpty) {
+    print('You need to specify a input file');
+    exit(1);
+  }
+
+  var inputFile = File(arguments.rest[0]);
   var outputFile = File(inputFile.path.replaceAll('.in', '.out'));
 
   if (arguments['output-file'] != null) {
